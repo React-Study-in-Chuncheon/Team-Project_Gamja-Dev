@@ -7,7 +7,10 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import reducer from "./reducer";
 
-const store = createStore(reducer);
+// redux devTools(chrome Extension)
+import { composeWithDevTools } from "redux-devtools-extension";
+
+const store = createStore(reducer, composeWithDevTools());
 
 ReactDOM.render(
    <React.StrictMode>

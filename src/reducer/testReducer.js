@@ -7,7 +7,7 @@ const initialState = {
 
 // state의 초기값을 정해주고 싶다면,
 // (state = initialState)형식으로 적어줍니다.
-export default (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
    switch (action.type) {
       case TEST_TYPE:
          return {
@@ -18,3 +18,5 @@ export default (state = initialState, action) => {
          return state;
    }
 };
+
+export default reducer;
